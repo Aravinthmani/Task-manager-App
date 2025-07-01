@@ -4,7 +4,7 @@ const app = express();
 const tasks = require('./routes/tasks');
 require('dotenv').config();
 
-
+const PORT = process.env.PORT || 3000;
 //middleware
 app.use(express.static('./public')); // to serve static files
 app.use(express.json()); // to parse JSON bodies
